@@ -1,0 +1,21 @@
+/* ActivationAgents opening animation. ~4s, tap to skip. */
+.aa-intro{position:fixed;inset:0;z-index:2147483647;overflow:hidden;background:#050505;cursor:pointer;-webkit-user-select:none;user-select:none}
+.aa-bg{position:absolute;inset:0;background:radial-gradient(55% 42% at 50% 50%,rgba(124,69,219,.24),rgba(124,69,219,0) 72%)}
+.aa-stage{position:absolute;left:50%;top:50%;width:360px;height:360px;margin:-180px 0 0 -180px;transform:scale(var(--aa-s,1))}
+.aa-shake,.aa-scene,.aa-final{position:absolute;inset:0}
+.aa-slot{position:absolute;left:50%;top:50%;width:0;height:0}
+.aa-wrap{position:absolute;transform:translate(-50%,-50%)}
+.aa-hop{transform-origin:50% 100%}
+.aa-ico{display:block;height:auto;opacity:0;transform-origin:50% 100%;filter:drop-shadow(0 0 7px rgba(162,115,245,.75)) drop-shadow(0 0 22px rgba(124,69,219,.5))}
+.aa-flash,.aa-ring{position:absolute;left:50%;top:50%;border-radius:50%;opacity:0;transform:translate(-50%,-50%)}
+.aa-flash{width:170px;height:170px;background:radial-gradient(circle,#fff 0%,rgba(255,255,255,.95) 18%,rgba(199,159,255,.75) 40%,rgba(124,69,219,0) 70%)}
+.aa-ring{width:110px;height:110px;border:3px solid #C79FFF;box-shadow:0 0 18px rgba(162,115,245,.8)}
+.aa-drops{position:absolute;left:-120px;top:-120px;width:600px;height:600px;pointer-events:none}
+.aa-final{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px}
+.aa-markbox{position:relative;width:210px;aspect-ratio:730/418}
+.aa-liquid,.aa-mark{position:absolute;inset:0;width:100%;height:100%;opacity:0}
+@property --aa-ang{syntax:'<angle>';inherits:false;initial-value:0deg}
+.aa-liquid{background:conic-gradient(from var(--aa-ang),#7C45DB,#A273F5,#C79FFF,#F3EAFF,#C79FFF,#A273F5,#7C45DB);-webkit-mask:var(--aa-mask) center/contain no-repeat;mask:var(--aa-mask) center/contain no-repeat}
+.aa-mark{filter:drop-shadow(0 0 10px rgba(162,115,245,.7)) drop-shadow(0 0 28px rgba(124,69,219,.45))}
+.aa-word{width:280px;height:auto;opacity:0}
+@media (prefers-reduced-motion:reduce){.aa-intro{display:none}}
